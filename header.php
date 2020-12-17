@@ -58,7 +58,7 @@
   </style>
 <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
   <div class="container" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="/BCTO/index.php">BC Tryout</a>
+    <a class="navbar-brand" href="/index.php">BC Tryout</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     </ul>
     <form class="form-inline my-2 my-lg-0">

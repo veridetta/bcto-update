@@ -137,33 +137,6 @@ $sesi=mysqli_fetch_assoc($ses);
             </div>
         </div>
     </div>
-    <!-- The Modal -->
-    <div class="modal" id="finishModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Yakin Selesai?</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="col-12 row" id="panel-control">
-                    <p>Kamu yakin akan mengirimkan jawabanmu sekarang?</p>
-                </div>
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
-                <button type="button" id="yakinFinish" class="btn btn-success">Yakin</button>
-            </div>
-
-            </div>
-        </div>
-    </div>
     <div id="message">
         <div style="padding: 5px;">
             <div class="alert hilang alert-danger" id="pessan" role="alert">
@@ -177,21 +150,23 @@ $sesi=mysqli_fetch_assoc($ses);
     $a_soal=1;
     $t_soal=mysqli_num_rows($t_s);
     ?>
+    <input type="hidden" id="nosoalupdate" value="<?php echo $a_soal;?>">
     <script>
         $(document).ready(function(){
-            var soalke="<?php echo $a_soal;?>";
+            var nosoal=$("#nosoalupdate");
+            var soalke=nosoal.val();
             var totalSoal="<?php echo $t_soal;?>";
             //getjawaban
-            $.get( "action/nav.php?id_siswa=<?php echo $id;?>&&id_sesi=<?php echo $sesi['id'];?>&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+            $.get( "action/nav-bahas.php?id_siswa=<?php echo $id;?>&&id_sesi=<?php echo $sesi['id'];?>&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                 $( "#panel-control" ).html( data );
             });
             //getsoal
-            $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+soalke+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+            $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                 $( "#soal" ).html( data );
                 $("#nomor_soal").html(soalke);
             });
             $("#berikutnya").click(function(){
-                if(soalke==totalSoal){
+                if(nosoal.val()==totalSoal){
                     /*$.get( "action/finish.php?idd=<?php echo $id;?>&&nomor="+soalke+"&&ujian=<?php echo $user['id'];?>", function( data ) {
                         if(data){
                             $("#pessan").html('Kamu akan dialihkan.');
@@ -203,33 +178,36 @@ $sesi=mysqli_fetch_assoc($ses);
                         $("#pessan").html('Kamu akan dialihkan.');
                         $("#message").toggleClass('hilang');
                         setTimeout(function(){window.location.replace("launch.php?lanjut=1"); }, 1000);
-                }else if(soalke<=totalSoal){
-                    if(soalke==totalSoal-1){
+                }else if(nosoal.val()<=totalSoal){
+                    if(nosoal.val()==totalSoal-1){
                         $(this).html('Selesai');
                     }
                     $("#sebelumnya").prop('disabled', false);
                     //soalke=$('#nosoalupdate').val();
-                    soalke++;
+                    //soalke++;
+                    var ss=parseInt(nosoal.val(), 10) + 1;
+                    nosoal.val(ss);
                     //getsoal
-                    $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+soalke+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+                    $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                         $( "#soal" ).html( data );
-                        $("#nomor_soal").html(soalke);
+                        $("#nomor_soal").html(nosoal.val());
                     });
                 }
             });
             $("#sebelumnya").prop('disabled', true);
             $("#sebelumnya").click(function(){
-                if(soalke==1){
+                if(nosoal.val()==1){
                     $("#sebelumnya").prop('disabled', true);
                 }else{
                     $("#berikutnya").html('Berikutnya');
                     $("#sebelumnya").prop('disabled', false);
                     //soalke=$('#nosoalupdate').val();
-                    soalke--;
+                    var ss=parseInt(nosoal.val(), 10) - 1;
+                    nosoal.val(ss);
                     //getsoal
-                    $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+soalke+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+                    $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                         $( "#soal" ).html( data );
-                        $("#nomor_soal").html(soalke);
+                        $("#nomor_soal").html(nosoal.val());
                     });
                 }
             })
