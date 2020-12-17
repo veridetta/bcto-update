@@ -21,6 +21,17 @@ if($_GET){
                 var sesi=<?php echo $sesi_id;?>;
                 var nosoal=$(this).html();
                 $("#nosoalupdate").val($(this).html());
+                var nosoall=$("#nosoalupdate");
+                if(nosoall.val()==1){
+                    $("#sebelumnya").prop('disabled', true);
+                }else{
+                    $("#sebelumnya").prop('disabled', false);
+                }
+                if(nosoall.val()==20){
+                    $("#berikutnya").html('Selesai');
+                }else{
+                    $("#berikutnya").html('Berikutnya');
+                }
                 $.get( "action/soal.php?idSesi="+sesi+"&&nomor="+nosoal+"&&nama=<?php echo $nama_sesi;?>", function( data ) {
                         $( "#soal" ).html( data );
                         $("#nomor_soal").html(nosoal);

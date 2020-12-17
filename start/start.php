@@ -175,9 +175,12 @@ $sesi=mysqli_fetch_assoc($ses);
     $a_soal=1;
     $t_soal=mysqli_num_rows($t_s);
     ?>
+    <input type="hidden" id="nosoalupdate" value="<?php echo $a_soal;?>">
     <script>
         $(document).ready(function(){
-            var soalke="<?php echo $a_soal;?>";
+            //var soalke="<?php echo $a_soal;?>";
+            var nosoal=$("#nosoalupdate");
+            var soalke=nosoal.val();
             var totalSoal="<?php echo $t_soal;?>";
             /* --TIMER OLD
             var timer2 = "<?php echo $total_sisa;?>";
@@ -227,12 +230,12 @@ $sesi=mysqli_fetch_assoc($ses);
                 $( "#panel-control" ).html( data );
             });
             //getsoal
-            $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+soalke+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+            $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                 $( "#soal" ).html( data );
                 $("#nomor_soal").html(soalke);
             });
             $("#berikutnya").click(function(){
-                if(soalke==totalSoal){
+                if(nosoal.val()==totalSoal){
                     /*$.get( "action/finish.php?idd=<?php echo $id;?>&&nomor="+soalke+"&&ujian=<?php echo $user['id'];?>", function( data ) {
                         if(data){
                             $("#pessan").html('Kamu akan dialihkan.');
@@ -242,7 +245,7 @@ $sesi=mysqli_fetch_assoc($ses);
                     });*/
                     $("#finishModal").modal('toggle');
                     $("#yakinFinish").click(function(){
-                        $.get( "action/finish.php?idd=<?php echo $id;?>&&nomor="+soalke+"&&ujian=<?php echo $user['id'];?>", function( data ) {
+                        $.get( "action/finish.php?idd=<?php echo $id;?>&&nomor="+nosoal.val()+"&&ujian=<?php echo $user['id'];?>", function( data ) {
                             if(data){
                                 $("#pessan").html('Kamu akan dialihkan.');
                                 $("#message").toggleClass('hilang');
@@ -250,33 +253,35 @@ $sesi=mysqli_fetch_assoc($ses);
                             }
                         });
                     })
-                }else if(soalke<=totalSoal){
-                    if(soalke==totalSoal-1){
+                }else if(nosoal.val()<=totalSoal){
+                    if(nosoal.val()==totalSoal-1){
                         $(this).html('Selesai');
                     }
                     $("#sebelumnya").prop('disabled', false);
                     //soalke=$('#nosoalupdate').val();
-                    soalke++;
+                    var ss=parseInt(nosoal.val(), 10) + 1;
+                    nosoal.val(ss);
                     //getsoal
-                    $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+soalke+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+                    $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                         $( "#soal" ).html( data );
-                        $("#nomor_soal").html(soalke);
+                        $("#nomor_soal").html(nosoal.val());
                     });
                 }
             });
             $("#sebelumnya").prop('disabled', true);
             $("#sebelumnya").click(function(){
-                if(soalke==1){
+                if(nosoal.val()==1){
                     $("#sebelumnya").prop('disabled', true);
                 }else{
                     $("#berikutnya").html('Berikutnya');
                     $("#sebelumnya").prop('disabled', false);
                     //soalke=$('#nosoalupdate').val();
-                    soalke--;
+                    var ss=parseInt(nosoal.val(), 10) - 1;
+                    nosoal.val(ss);
                     //getsoal
-                    $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+soalke+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+                    $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                         $( "#soal" ).html( data );
-                        $("#nomor_soal").html(soalke);
+                        $("#nomor_soal").html(nosoal.val());
                     });
                 }
             })
