@@ -35,7 +35,7 @@ if($_POST){
 $tp=mysqli_query($con, "select * from paket_soal where id='$id_paket'");
 $tps=mysqli_fetch_assoc($tp);
 if($gagal>0){
-    header('location:/bcto/home.php');
+    header('location:/home.php');
 }
 ?>
 <div class="col-12 row row-imbang primary" style="background:white;margin-top:60px;">

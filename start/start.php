@@ -78,7 +78,7 @@ if($hitung<1){
     echo $hitung;
 }
 if($gagal>0){
-    header('location:/bcto/home.php');
+    header('location:/home.php');
 }
 //cek paket soal yang aktif
 $ak=mysqli_query($con, "select * from paket_soal where status='2'");

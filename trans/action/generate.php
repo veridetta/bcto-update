@@ -214,6 +214,6 @@ if($_POST){
 }else{
     $gagal=1; 
     if($gagal>0){
-        header('location:/bcto/home.php');
+        header('location:/home.php');
     }
 }

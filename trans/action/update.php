@@ -156,6 +156,6 @@ if($_POST){
     echo "gada";
     $gagal=1; 
     if($gagal>0){
-        header('location:/bcto/home.php');
+        header('location:/home.php');
     }
 }

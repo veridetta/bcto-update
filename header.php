@@ -66,11 +66,11 @@
        session_start();
        if($_SESSION){
           ?>
-          <a id="logoutheader" class="btn btn-outline-danger my-2 my-sm-0" style="margin-right:6px;" href="/bcto/logout.php">Logout</a>
+          <a id="logoutheader" class="btn btn-outline-danger my-2 my-sm-0" style="margin-right:6px;" href="/logout.php">Logout</a>
           <?php
        }else{
          ?>
-        <button class="btn btn-outline-danger my-2 my-sm-0" style="margin-right:6px;"><a href="/bcto/login.php">Login</a></button>
+        <button class="btn btn-outline-danger my-2 my-sm-0" style="margin-right:6px;"><a href="/login.php">Login</a></button>
         <button class="btn btn-outline-warning my-2 my-sm-0"><a href="signup.php">Daftar</a></button>
          <?php
        }

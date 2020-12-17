@@ -112,7 +112,7 @@ $(document).ready(function() { /// Wait till page is loaded
             tinymce.init({
                 selector: '#inputan',
                 images_upload_url: 'upload_img.php',
-                content_css : '/bcto/assets/css/tiny.css',
+                content_css : '/assets/css/tiny.css',
                 min_height: 500,
                 setup: function (editor) {
                     editor.on('init', function (e) {
@@ -166,7 +166,7 @@ $(document).ready(function() { /// Wait till page is loaded
             tinymce.init({
                 selector: '#opsi-a',
                 images_upload_url: 'upload_img.php',
-                content_css : '/bcto/assets/css/tiny.css',
+                content_css : '/assets/css/tiny.css',
                 min_height: 200,
                 setup: function (editor) {
                     editor.on('init', function (e) {
@@ -220,7 +220,7 @@ $(document).ready(function() { /// Wait till page is loaded
             tinymce.init({
                 selector: '#opsi-b',
                 images_upload_url: 'upload_img.php',
-                content_css : '/bcto/assets/css/tiny.css',
+                content_css : '/assets/css/tiny.css',
                 min_height: 200,
                 setup: function (editor) {
                     editor.on('init', function (e) {
@@ -274,7 +274,7 @@ $(document).ready(function() { /// Wait till page is loaded
             tinymce.init({
                 selector: '#opsi-c',
                 images_upload_url: 'upload_img.php',
-                content_css : '/bcto/assets/css/tiny.css',
+                content_css : '/assets/css/tiny.css',
                 min_height: 200,
                 setup: function (editor) {
                     editor.on('init', function (e) {
@@ -328,7 +328,7 @@ $(document).ready(function() { /// Wait till page is loaded
             tinymce.init({
                 selector: '#opsi-d',
                 images_upload_url: 'upload_img.php',
-                content_css : '/bcto/assets/css/tiny.css',
+                content_css : '/assets/css/tiny.css',
                 min_height: 200,
                 setup: function (editor) {
                     editor.on('init', function (e) {
@@ -382,7 +382,7 @@ $(document).ready(function() { /// Wait till page is loaded
             tinymce.init({
                 selector: '#opsi-e',
                 images_upload_url: 'upload_img.php',
-                content_css : '/bcto/assets/css/tiny.css',
+                content_css : '/assets/css/tiny.css',
                 min_height: 200,
                 setup: function (editor) {
                     editor.on('init', function (e) {
@@ -436,7 +436,7 @@ $(document).ready(function() { /// Wait till page is loaded
             tinymce.init({
                 selector: '#pembahasan',
                 images_upload_url: 'upload_img.php',
-                content_css : '/bcto/assets/css/tiny.css',
+                content_css : '/assets/css/tiny.css',
                 min_height: 500,
                 setup: function (editor) {
                     editor.on('init', function (e) {

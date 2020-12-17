@@ -95,7 +95,7 @@ $tag=mysqli_query($con, "select * from tagihan where id_siswa='$id' and expires>
     }
 
 if($gagal>0){
-    header('location:/bcto/home.php');
+    header('location:/home.php');
 }
 ?>
 <div class="col-12">

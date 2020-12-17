@@ -26,7 +26,7 @@ if($_SESSION){
         $saldo=0;
     }
 }else{
-    header('location:/bcto/index.php');
+    header('location:/index.php');
 }
 function format_hari_tanggal($waktu){
     $hari_array = array(

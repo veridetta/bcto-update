@@ -8,7 +8,7 @@
 <body>
 <?php include 'header.php';
   if($_SESSION){
-    header('location:/bcto/home.php');}
+    header('location:/home.php');}
   ?>
 <div class="jumbotron bg-white" style="min-height:100vh;">
   <div class="row align-items-center justify-content-center h-100">

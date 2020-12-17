@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 echo 'You have been logged out.';
-header('location:/bcto/index.php')
+header('location:/index.php')
 ?>

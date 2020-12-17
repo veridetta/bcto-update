@@ -80,7 +80,7 @@ if($_POST){
 // cek status paket soal
 
 if($gagal>0){
-    header('location:/bcto/home.php');
+    header('location:/home.php');
 }
 //cek paket soal yang aktif
 $ak=mysqli_query($con, "select * from paket_soal where id='$id_paket'");

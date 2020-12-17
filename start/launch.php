@@ -35,7 +35,7 @@ if($hitung<1){
     echo $hitung;
 }
 if($gagal>0){
-    header('location:/bcto/home.php');
+    header('location:/home.php');
 }
 ?>
 <div class="col-12 row row-imbang primary" style="background:white;margin-top:60px;">

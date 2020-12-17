@@ -35,7 +35,7 @@ if($_SESSION){
      $gagal=1;
 }
 if($gagal>0){
-    header('location:/bcto/home.php');
+    header('location:/home.php');
 }
 ?>
 <div class="col-12 row row-imbang primary" style="margin-top:60px;">
