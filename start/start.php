@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bagja College Try Out</title>
+  <title>BaseCampTO by Bagja College</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/assets/image/logo.png">
 </head>
 <body style="background:white">
 <?php include '../header.php';?>
@@ -263,6 +264,17 @@ $sesi=mysqli_fetch_assoc($ses);
                     nosoal.val(ss);
                     //getsoal
                     $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+                        $( "#soal" ).html( data );
+                        $("#nomor_soal").html(nosoal.val());
+                    });
+                }else if(nosoal.val()>20){
+                    alert('Error');
+                }else{
+                    $("#sebelumnya").prop('disabled', false);
+                    var ss=parseInt(nosoal.val(), 10) + 1;
+                    nosoal.val(ss);
+                    //getsoal
+                    $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                         $( "#soal" ).html( data );
                         $("#nomor_soal").html(nosoal.val());
                     });

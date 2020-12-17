@@ -16,7 +16,7 @@ $(document).ready(function() {
       if(validate()) {
         $.ajax({
           type: "POST",
-          url: "../bcto/action/signup_progress.php",
+          url: "/action/signup_progress.php",
           data: form.serialize(),
           dataType: "json"
         }).done(function(data) {

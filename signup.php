@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Signup - Bagja College Try Out</title>
+  <title>Signup - BaseCampTO by Bagja College</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/assets/image/logo.png">
 </head>
 <body>
     <?php include 'header.php';?>

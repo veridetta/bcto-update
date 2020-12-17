@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Login - Bagja College Try Out</title>
+  <title>Login - BaseCampTO by Bagja Colelge</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/assets/image/logo.png">
 </head>
 <body>
     <?php include 'header.php';?>
@@ -40,7 +41,7 @@
                     <div class="card-footer">
                         <input type="submit" class="btn btn-primary btn-block" id="submit" name="submit" value="Login">
                         <p></p>
-                        <p class="text-center">Belum punya akun? <a href="daftar" class="text-primary">Daftar Sekarang</a></p>
+                        <p class="text-center">Belum punya akun? <a href="/signup.php" class="text-primary">Daftar Sekarang</a></p>
                     </div>
                 </form>
             </div>

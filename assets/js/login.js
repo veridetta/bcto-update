@@ -13,7 +13,7 @@ $(document).ready(function() {
       if(validate()) {
         $.ajax({
           type: "POST",
-          url: "../bcto/action/login_progress.php",
+          url: "/action/login_progress.php",
           data: form.serialize(),
           dataType: "json"
         }).done(function(data) {

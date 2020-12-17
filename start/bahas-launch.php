@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bagja College Try Out</title>
+  <title>Pembahasan - BaseCampTO by Bagja College</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/assets/image/logo.png">
 </head>
 <body style="background-color:#f8f8f8">
 <?php include '../header.php';?>
@@ -56,11 +57,11 @@ if($gagal>0){
     </div>
     <div class="col-12 row row-imbang" style="background-color:white;padding:20px;margin-bottom:12px;">
         <div class="col-12">
-            <p class="h4 text-danger"><i class="fa fa-book"></i> TO Curi Start 01</p>
+            <p class="h4 text-danger"><i class="fa fa-book"></i> <?php echo $tps['nama'];?></p>
             <hr>   
         </div>            
         <div class="col-6">
-            <p class="h4">Tes Pengetahuan Skolastik</p>
+            <p class="h4">Tes Pengetahuan Skolastik & Akademik</p>
             <hr>
         </div>
         <div class="col-12 row justify-content-center">
@@ -102,6 +103,7 @@ if($gagal>0){
         <hr>
     </div>
 </div>
+<?php include '../footer.php';?>
 <script>
 $(document).ready(function(){
     var tinggi = $('.buka2').height();

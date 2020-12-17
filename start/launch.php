@@ -56,11 +56,11 @@ if($gagal>0){
     </div>
     <div class="col-12 row row-imbang" style="background-color:white;padding:20px;margin-bottom:12px;">
         <div class="col-12">
-            <p class="h4 text-danger"><i class="fa fa-book"></i> TO Curi Start 01</p>
+            <p class="h4 text-danger"><i class="fa fa-book"></i> <?php echo $tps['nama'];?></p>
             <hr>   
         </div>            
         <div class="col-6">
-            <p class="h4">Tes Pengetahuan Skolastik</p>
+            <p class="h4">Tes Pengetahuan Skolastik & Akademik</p>
             <hr>
         </div>
         <div class="col-12 row justify-content-center">
