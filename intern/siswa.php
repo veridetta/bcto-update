@@ -123,6 +123,12 @@
           footerFormatter: totalNameFormatter,
           align: 'center'
         }, {
+          field: 'hp',
+          title: 'No HP',
+          sortable: false,
+          footerFormatter: totalNameFormatter,
+          align: 'center'
+        }, {
           field: 'bintang',
           title: 'Bintang',
           sortable: false,

@@ -77,7 +77,7 @@ if($gagal>0){
                         <p class="h1 text-center">100</p>
                         <p class="text-center text-secondary">Setara lebih dari 1 paket soal</p>
                         <hr>
-                        <button class="btn btn-info btn-block btn-beli">Rp25.000</button>
+                        <button class="btn btn-info btn-block btn-beli">Rp20.000</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ if($gagal>0){
                         <p class="h1 text-center">200</p>
                         <p class="text-center text-secondary">Setara lebih dari 2 paket soal</p>
                         <hr>
-                        <button class="btn btn-info btn-block btn-beli">Rp48.000</button>
+                        <button class="btn btn-info btn-block btn-beli">Rp35.000</button>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@ if($gagal>0){
                         <p class="h1 text-center">500</p>
                         <p class="text-center text-secondary">Setara lebih dari 5 paket soal</p>
                         <hr>
-                        <button class="btn btn-danger btn-block btn-beli">Rp120.000</button>
+                        <button class="btn btn-danger btn-block btn-beli">Rp80.000</button>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@ if($gagal>0){
                         <p class="h1 text-center">1000</p>
                         <p class="text-center text-secondary">Setara lebih dari 10 paket soal</p>
                         <hr>
-                        <button class="btn btn-info btn-block btn-beli">Rp235.000</button>
+                        <button class="btn btn-info btn-block btn-beli">Rp150.000</button>
                     </div>
                 </div>
             </div>

@@ -163,7 +163,7 @@ function statistik($tipe,$id){
                 //2 === mulai
                 //3 === stop/masa lalu
                 //4 === sesi pembahasan
-                $qu=mysqli_query($con, "select * from paket_soal where status <3 order by id desc");
+                $qu=mysqli_query($con, "select * from paket_soal where status <3 order by status desc");
                 $hit=mysqli_num_rows($qu);
                 if($hit<1){
                     ?>
@@ -221,7 +221,7 @@ function statistik($tipe,$id){
                     </div>
                 </div>
             <?php
-            };
+                };
             ?>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Signup - BaseCampTO by Bagja College</title>
+  <title>Signup - BaseCampTO</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/assets/image/logo.png">
@@ -55,13 +55,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-key"></i></span>
                                 </div>
                                 <input type="password" required name="password" id="password" class="form-control required" pattern=".{8,}" title="8 characters minimum" placeholder="Masukan Password">
-                                <input type="text" name="ref_friend" id="ref_friend" class="form-control" pattern=".{6,}" title="8 characters minimum" placeholder="Referal Teman">
+                                <input type="hidden" name="ref_friend" id="ref_friend" class="form-control" pattern=".{6,}" title="8 characters minimum" placeholder="Referal Teman">
                             </div>
                         </div>
                     </div>

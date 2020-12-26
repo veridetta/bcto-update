@@ -13,19 +13,30 @@ if($_GET){
     $order=isset($_GET['order']) ? $_GET['order'] : '';
     $to=mysqli_query($con, "select * from user where role='user'");
     $total=mysqli_num_rows($to);
-    if(strlen($sort)<1){
-        $si=mysqli_query($con, "select * from user where role='user' and nama like '%$search%' limit $limit");
-        echo mysqli_error($con);
+    if(strlen($offset)>0){
+        $no=$offset+1;
+        if(strlen($sort)<1){
+            $si=mysqli_query($con, "select * from user where role='user' and nama like '%$search%' limit $limit offset $offset");
+            echo mysqli_error($con);
+        }else{
+            $si=mysqli_query($con, "select * from user where role='user' and nama like '%$search%' order by $sort $order limit $limit offset $offset");
+        }
     }else{
-        $si=mysqli_query($con, "select * from user where role='user' and nama like '%$search%' order by $sort $order limit $limit");
+        $no=1;
+        if(strlen($sort)<1){
+            $si=mysqli_query($con, "select * from user where role='user' and nama like '%$search%' limit $limit");
+            echo mysqli_error($con);
+        }else{
+            $si=mysqli_query($con, "select * from user where role='user' and nama like '%$search%' order by $sort $order limit $limit");
+        }
     }
+    
     $hitung=mysqli_num_rows($si);
     $ide=array();
     $nomor=array();
     $nama=array();
     $bintang=array();
     $ikut=array();
-    $no=1;
     while($siswa=mysqli_fetch_array($si)){
         $sa=mysqli_query($con, "select * from riwayat_bintang where id_users='$siswa[id]' order by id desc limit 1");
         $sal=mysqli_fetch_assoc($sa);
@@ -43,6 +54,7 @@ if($_GET){
         $rows['id']=$siswa['id'];
         $rows['no']=$no;
         $rows['nama']=$siswa['nama'];
+        $rows['hp']=$siswa['hp'];
         $rows['bintang']=$saldo;
         $rows['ikut']=$jpaket;
         $no++;

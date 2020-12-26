@@ -15,6 +15,7 @@ if($_POST){
     $d=mysqli_real_escape_string($con,$_POST['opsi-d']);
     $e=mysqli_real_escape_string($con,$_POST['opsi-e']);
     $kunci=mysqli_real_escape_string($con,$_POST['kunci']);
+    $idd=mysqli_real_escape_string($con,$_POST['idd']);
     $pembahasan=mysqli_real_escape_string($con,$_POST['pembahasan']);
     $qu=mysqli_query($con, "update soal set id_paket_soal='$paket_id', id_sesi_soal='$soal_id', isi='$isi', kunci='$kunci', pembahasan='$pembahasan', a='$a', b='$b', c='$c', d='$d', e='$e' where id='$idd'");
     //print_r($_POST);

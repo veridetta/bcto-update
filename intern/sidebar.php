@@ -21,7 +21,7 @@
             </div>
             !-->
             <a href="siswa" class="list-group-item list-group-item-action bg-light">Siswa</a>
-            <a href="pembayaran.php" class="list-group-item list-group-item-action bg-light">Pembayaran</a>
+            <a href="pembayaran" class="list-group-item list-group-item-action bg-light">Pembayaran</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
         </div>
         </div>

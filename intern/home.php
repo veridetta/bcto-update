@@ -25,6 +25,7 @@ if($_SESSION['role']=='admin'){
     <script src="../assets/javascripts/ckeditor/ckeditor.js"></script>
     <script src="../assets/javascripts/ckeditor/config.js"></script>-->
     <script src="../assets/js/tinymce/tinymce.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <div class="d-flex" id="wrapper">
         <?php include 'sidebar.php';?>
         <!-- Page Content -->

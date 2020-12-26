@@ -44,7 +44,7 @@ function myStat($v){
             </thead>
             <tbody>
                 <?php
-                    $s=mysqli_query($con, "select * from paket_soal order by id");
+                    $s=mysqli_query($con, "select * from paket_soal order by id desc");
                     while($su=mysqli_fetch_array($s)){
                         $nama=$su['nama'];
                         $keterangan=$su['keterangan'];

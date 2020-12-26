@@ -23,7 +23,7 @@
             <table class="table table-striped">
                 <tbody>
                     <?php
-                    $s=mysqli_query($con, "select * from sesi_soal where id_paket_soal='$qu[id]'  order by id desc");
+                    $s=mysqli_query($con, "select * from sesi_soal where id_paket_soal='$qu[id]'  order by id asc");
                     while($su=mysqli_fetch_array($s)){
                         $jum=mysqli_query($con, "select * from soal where id_paket_soal='$qu[id]' and id_sesi_soal='$su[id]'");
                         $jumlahe=mysqli_num_rows($jum);

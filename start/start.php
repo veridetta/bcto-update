@@ -8,6 +8,7 @@
 </head>
 <body style="background:white">
 <?php include '../header.php';?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <style>
 #message {
     position: fixed;
@@ -204,7 +205,7 @@ $sesi=mysqli_fetch_assoc($ses);
             }, 1000);
             */
             //var countDownDate = new Date("<?php echo $akhir_ujian;?>").getTime();
-            var countDownDate = Date.parse("<?php echo $akhir_ujian;?>");
+            var countDownDate = moment("<?php echo $akhir_ujian;?>").toDate();
             // Update the count down every 1 second
             var x = setInterval(function() {
             // Get today's date and time
@@ -274,7 +275,7 @@ $sesi=mysqli_fetch_assoc($ses);
                     var ss=parseInt(nosoal.val(), 10) + 1;
                     nosoal.val(ss);
                     //getsoal
-                    $.get( "action/soal-bahas.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
+                    $.get( "action/soal.php?idSesi=<?php echo $sesi['id'];?>&&nomor="+nosoal.val()+"&&nama=<?php echo $sesi['nama_sesi'];?>", function( data ) {
                         $( "#soal" ).html( data );
                         $("#nomor_soal").html(nosoal.val());
                     });

@@ -66,8 +66,8 @@
                 die($output);
             }
         }else{
-            if($hitung>=$harga){
-                $sisa=$hitung-$harga;
+            if($saldo>=$harga){
+                $sisa=$saldo-$harga;
                 //status riwayat
                 //1 topup
                 //2 pembelian

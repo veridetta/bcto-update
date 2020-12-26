@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>BaseCampTO by Bagja College</title>
+  <title>BaseCampTO </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/assets/image/logo.png">
@@ -14,10 +14,10 @@
 <div class="jumbotron bg-white" style="min-height:100vh;">
   <div class="row align-items-center justify-content-center h-100">
     <div class="col-md-6 order-2 mt-3 mt-md-0 order-md-first">
-      <p class="h2 text-danger">Try Out UTBK 2020-2021 hanya di BaseCampTO by Bagja College!</p>
+      <p class="h2 text-danger">Try Out UTBK 2020-2021 hanya di BaseCampTO!</p>
       <p class="h5">Dengan sistem penilain dan analisa jawaban yang lengkap dan relevan berdasarkan UTBK 2021</p>
-      <p class="h3 "><span class="badge badge-primary"><i class="fa fa-file text-white"></i> TO Curi Start 01</span></p>
-      <p class="h2"><i class="fa fa-calendar text-danger"></i> <span class="badge badge-warning"></i> 10 - 13 Desember 2020</span></p>
+      <p class="h3 "><span class="badge badge-primary"><i class="fa fa-file text-white"></i> Welcome Rangers UTBK 2021!</span></p>
+      <p class="h2"><i class="fa fa-calendar text-danger"></i> <span class="badge badge-warning"></i> 26 - 28 Desember 2020</span></p>
       <hr>
       <a type="button" href="signup.php" class="btn btn-info"><p class="h4">Daftar</p></a> <a type="button" href="login.php" class="btn btn-danger"><p class="h4">Masuk</p></a>
       <hr>

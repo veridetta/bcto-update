@@ -104,7 +104,7 @@ if($_POST){
             $httpCodePost = curl_getinfo($chPost, CURLINFO_HTTP_CODE);
             curl_close($chPost);
             $jsonPost = json_decode($resultPost, true);
-            //print_r($jsonPost);
+            print_r($jsonPost);
             $datax['custCode']=$jsonPost['data']['custCode'];
             $datax['amount']=$jsonPost['data']['amount'];
             $datax['keterangan']=$jsonPost['data']['keterangan'];
@@ -154,9 +154,12 @@ if($_POST){
             //echo "<br/> <br/>";
             //echo "Response Post : ".$resultPost;
     }
+    define('TIMEZONE', 'Asia/Jakarta');
+    date_default_timezone_set(TIMEZONE);
     $clientid="xanuXo0i6auDxRKmVa5NF8EDYfmUERei";
     $clientsecret="WqASWC9i23UVQMeI";
     $se=mysqli_query($con, "select * from briapi where expires>=NOW()");
+    //print_r($se);
     $seh=mysqli_num_rows($se);
     $accesstoken="";
     if($seh>0){
