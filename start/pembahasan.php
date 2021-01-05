@@ -99,7 +99,7 @@ $total_sisa=$menit.":".$detik;
 //cek sesi aktif
 $nomor_sesi=mysqli_num_rows($us);
 //select sesi aktif
-$ses=mysqli_query($con, "select * from sesi_soal where id='$user[id_soal]'");
+$ses=mysqli_query($con, "select * from sesi_soal where id='$id_sesi'");
 $sesi=mysqli_fetch_assoc($ses);
 
 ?>
